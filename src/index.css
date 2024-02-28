@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*::-webkit-scrollbar{
+    width: 12px;
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    width: 100%;
+    background-color: rgb(57, 57, 57);
+    border-radius: 30px;
+}
+
+.btn-card:hover{
+    opacity: 1;
+}
+
+.cart{
+    height: calc(100vh - 6rem);
+}
+
+.main{
+    height: calc(100vh - 14rem);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.back:hover .arr{
+    transform: translate(-0.25rem);
+}
+
+.loading{
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+    100%{
+        rotate: 360deg;
+    }
+}
+
+.skeleton-shape{
+animation: animation linear infinite 0.5s;
+}
+
+@keyframes animation {
+    0%{
+        opacity: 0.6;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.6;
+    }
+}
