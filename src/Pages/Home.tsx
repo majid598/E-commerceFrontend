@@ -16,11 +16,11 @@ const Home = () => {
 
   if (isError) toast.error("Cannot fetch the Products");
 
-  const AddtoCartHandler = (cartItem: CartItem) => {
+  const addToCartHandler = (cartItem: CartItem) => {
     if (cartItem.stock < 1) return toast.error("Out of Stock");
     dispatch(addToCart(cartItem));
     success.play();
-    toast.success("Item Added To Cart");
+    toast.success("Added to cart");
   };
 
   return (
@@ -55,7 +55,7 @@ const Home = () => {
                 name={i.name}
                 price={i.price}
                 stock={i.stock}
-                handler={AddtoCartHandler}
+                handler={addToCartHandler}
                 photo={`${server}/${i.photo}`}
               />
             ))
