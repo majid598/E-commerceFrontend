@@ -11,6 +11,7 @@ import { getUser } from "./redux/api/userAPI";
 import { UserReducerInitialState } from "./types/reducer-types";
 import ProtectedRoutes from "./Components/ProtectedRoutes";
 import { ToastContainer } from "react-toastify";
+import { Toaster } from "react-hot-toast";
 
 
 
@@ -132,6 +133,7 @@ const App = () => {
         </Routes>
       </Suspense>
           <ToastContainer pauseOnHover={false}/>
+          <Toaster position="bottom-center"/>
       {/* <Footer/> */}
     </Router>
   );

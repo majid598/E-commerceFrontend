@@ -6,7 +6,7 @@ import { Skeleton } from "../Components/Loader";
 import { CartItem } from "../types/types";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/reducer/cartReducer";
-import { toast, ToastContainer } from "react-toastify";
+import toast from "react-hot-toast";
 import { success } from "../main";
 
 const Home = () => {
@@ -62,7 +62,7 @@ const Home = () => {
           )}
         </main>
       </div>
-      <ToastContainer pauseOnHover={false} />
+      {/* <ToastContainer pauseOnHover={false} /> */}
     </div>
   );
 };
